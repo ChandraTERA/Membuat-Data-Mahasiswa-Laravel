@@ -15,10 +15,10 @@ class Upload extends Model
         'picture',
         'username',
         'name',
-        'privilege',    
+        'privilege',
     ];
     public $timestamps = true; // Jika menggunakan timestamps, atur menjadi true
     public $timestamp =true;
 
-    
+
 }
