@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('registrasion', static function (Blueprint $table){
+            $table->id();
+            $table->string('username');
+            $table->string('email')->unique();
+            // $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            // $table->rememberToken();
+            // $table->timestamp('waktu_sekarang')->userCurrent();
+            $table->timestamps();
+        }); 
+        // Schema::create('login', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('email')->unique;
+        //     $table->string('password');
+        //     $table->timestamps();
+        //     $table->timestamp('waktu_sekarang')->useCurrent();
+        // });
+    }
+    
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        //
+    }
+};
